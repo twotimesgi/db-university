@@ -6,3 +6,16 @@
 6)      SELECT * FROM `degrees` WHERE level = 'magistrale';
 7)      SELECT COUNT(*) FROM `departments`;
 8)      SELECT COUNT(*) FROM `teachers` WHERE phone IS NULL;
+
+1)      SELECT YEAR(enrolment_date), COUNT(*) FROM `students` GROUP BY YEAR(enrolment_date)
+2)      SELECT COUNT(*), office_address FROM `teachers` GROUP BY office_address
+3)      SELECT AVG(vote), exam_id FROM `exam_student` GROUP BY exam_id
+4)      SELECT departments.name, COUNT(*) FROM `degrees` JOIN departments ON degrees.department_id = departments.id GROUP BY department_id
+
+1)      
+2)
+3)
+4)
+5)
+6)
+7)
