@@ -15,7 +15,7 @@
 1)      SELECT * FROM `students` JOIN `degrees` ON students.degree_id = degrees.id WHERE degrees.name = "Corso di Laurea in Economia"
 2)      SELECT * FROM `degrees` JOIN `departments` ON degrees.department_id = departments.id AND departments.name = "Dipartimento di Neuroscienze";
 3)      SELECT courses.name FROM `teachers` JOIN `course_teacher` ON teachers.id = course_teacher.teacher_id JOIN `courses` ON courses.id = course_teacher.course_id WHERE teachers.name = "Fulvio" AND teachers.surname = "Amato"
-4)
-5)
-6)
+4)      SELECT students.id, students.name, students.surname, students.date_of_birth, students.fiscal_code, students.enrolment_date, students.registration_number, students.email, departments.name, degrees.name FROM `students` JOIN `degrees`  ON degrees.id = students.degree_id JOIN `departments` ON departments.id = degrees.department_id ORDER BY students.name, students.surname
+5)      
+6)      SELECT teachers.id, teachers.name, teachers.surname FROM `teachers` JOIN `course_teacher` ON teachers.id = course_teacher.teacher_id JOIN `courses` ON courses.id = course_teacher.course_id JOIN `degrees` ON degrees.id = courses.degree_id JOIN `departments` ON degrees.department_id = departments.id WHERE departments.name = "Dipartimento di Matematica"
 7)
